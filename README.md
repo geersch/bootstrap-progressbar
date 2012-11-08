@@ -21,7 +21,7 @@ The progressbar automatically changes the color depending on its position.
 
 ## Demo
 
-[Click here for a live demo].(http://geersch.github.com/bootstrap-progressbar/demo.html)
+[Click here for a live demo](http://geersch.github.com/bootstrap-progressbar/demo.html).
 
 ## Usage
 
