@@ -30,6 +30,9 @@ Basic usage:
 <script type="text/javascript" src="bootstrap.js"></script>
 <link rel="stylesheet" type="text/css" href="bootstrap.css" />
 
+<div id="progressbar">
+</div>
+
 <script type="text/javascript">
 $('#progressbar').progressbar();
 </script>
