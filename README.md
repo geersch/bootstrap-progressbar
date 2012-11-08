@@ -20,3 +20,4 @@ By default the following percentages are used for the zones:
 The progressbar automatically changes the color depending on its position.
 
 # Usage
+-------
