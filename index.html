@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="bootstrap-progressbar : " />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css" />
 
     <title>bootstrap-progressbar</title>
   </head>
@@ -31,44 +31,186 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>Welcome to GitHub Pages.</h3>
+        <h3>Multi-Color Progressbar for Twitter Bootstrap</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+		<img src="https://dl.dropbox.com/u/40603470/bootstrap-progressbar/bar.png" alt="Progressbar example" title="Progressbar example" />
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+		<p>Multi-Color progressbar component for Twitter Bootstrap creates a progressbar which consists out of three colors or zones.</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+		<ul>
+			<li>Green (bar-success)</li>
+			<li>Orange (bar-warning)</li>
+			<li>Red (bar-danger)</li>
+		</ul>
 
-<h3>Designer Templates</h3>
+		<p>The progressbar consists out of three zones: safe, warning and danger. The safe zone is displayed in green, the warning zone in orange and red is used for the danger zone.</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+		<p>By default the following percentages are used for the zones:</p>
 
-<h3>Rather Drive Stick?</h3>
+		<ul>
+			<li>Green (0 - 50%)</li>
+			<li>Warning (50 - 90%)</li>
+			<li>Danger (90 - 100%)</li>
+		</ul>
+		<p>The progressbar automatically changes the color depending on its position.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<h3>Demo</h3>
 
-<h3>Authors and Contributors</h3>
+<a href="demo.html" target="_blank">Click here for a live demo</a>.
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h3>Usage</h3>
 
-<h3>Support or Contact</h3>
+<p>This component relies on <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> and <a href="http://jquery.com/" target="_blank">jQuery</a>.</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
-    </div>
+<p>Basic usage:</p>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">bootstrap-progressbar maintained by <a href="https://github.com/geersch">geersch</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
-      </footer>
-    </div>
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+<span class="kwrd">&lt;</span><span class="html">script</span> <span class="attr">type</span><span class="kwrd">="text/javascript"</span> <span class="attr">src</span><span class="kwrd">="jquery.js"</span><span class="kwrd">&gt;&lt;/</span><span class="html">script</span><span class="kwrd">&gt;</span>
+&lt;script type=<span class="str">"text/javascript"</span> src=<span class="str">"bootstrap.js"</span>&gt;&lt;/script&gt;
+&lt;link rel=<span class="str">"stylesheet"</span> type=<span class="str">"text/css"</span> href=<span class="str">"bootstrap.css"</span> /&gt;
 
-    
+&lt;div id=<span class="str">"progressbar"</span>&gt;
+&lt;/div&gt;
+
+&lt;script type=<span class="str">"text/javascript"</span>&gt;
+$(<span class="str">'#progressbar'</span>).progressbar();
+<span class="kwrd">&lt;/</span><span class="html">script</span><span class="kwrd">&gt;</span></pre>
+</div>
+
+<p>You can use the following additional options to modify the behaviour of the progressbar:</p>
+
+<ul>
+<li><strong>warningMarker</strong>: Percentage at which the warning zone starts (default 50%).</li>
+<li><strong>dangerMarker</strong>: Percentage at which the danger zone starts (default 90%).</li>
+<li><strong>maximum</strong>: Maximum value which equals 100%.</li>
+<li><strong>step</strong>: The amount that each completed task in an operation changes the value of the progress bar.</li>
+</ul>
+
+<p>For example:</p>
+
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+<span class="kwrd">&lt;</span><span class="html">script</span> <span class="attr">type</span><span class="kwrd">="text/javascript"</span> <span class="attr">src</span><span class="kwrd">="jquery.js"</span><span class="kwrd">&gt;&lt;/</span><span class="html">script</span><span class="kwrd">&gt;</span>
+&lt;script type=<span class="str">"text/javascript"</span> src=<span class="str">"bootstrap.js"</span>&gt;&lt;/script&gt;
+&lt;link rel=<span class="str">"stylesheet"</span> type=<span class="str">"text/css"</span> href=<span class="str">"bootstrap.css"</span> /&gt;
+
+&lt;div id=<span class="str">"progressbar"</span>&gt;
+&lt;/div&gt;
+
+&lt;script type=<span class="str">"text/javascript"</span>&gt;
+$(<span class="str">'#progressbar'</span>).progressbar({
+    warningMarker: 60,
+    dangerMarker: 80,
+    maximum: 100,
+    step: 5
+});
+<span class="kwrd">&lt;/</span><span class="html">script</span><span class="kwrd">&gt;</span></pre>
+</div>
+
+<h3>Methods</h3>
+
+<p><strong>stepIt</strong></p>
+
+<p>Increases the position of the progressbar with the value of its step property.</p>
+
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+$('#progressbar').('stepIt');</pre>
+</div>
+
+<p><strong>setWarningMarker</strong></p>
+
+<p>Set the position, expressed in percentage, of the warning marker.</p>
+
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+$('#progressbar').('setWarningMarker', 50);</pre>
+</div>
+
+<p><strong>setDangerMarker</strong></p>
+
+<p>Set the position, expressed in percentage, of the danger marker.</p>
+
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+$('#progressbar').('setDangerMarker', 90);</pre>
+</div>
+
+<p><strong>setStep</strong></p>
+
+<p>Set the step, by which the position of the progressbar is increased each time the stepIt() method is called.</p>
+
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+$('#progressbar').('setStep', 10);</pre>
+</div>
+
+<p><strong>setMaximum</strong></p>
+
+<p>Set the maximum allowed value of the progressbar.</p>
+
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+$('#progressbar').('setMaximum', 85);</pre>
+</div>
+
+<p><strong>setPosition</strong></p>
+
+<p>Set the current position of the progressbar. Must be less or equal to the maximum.</p>
+
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+$('#progressbar').('setPosition', 85);</pre>
+</div>
+
+<p><strong>reset</strong></p>
+
+<p>Resets the progressbar back to position 0.</p>
+
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+$('#progressbar').('reset');</pre>
+</div>
+
+<h3>Events</h3>
+
+<p>he progressbar supports one event, namely <strong>positionChanged</strong>. This event is triggered when its position changes.</p>
+
+<p>The event objects has two additional properties:</p>
+
+<ul>
+	<li><strong>position</strong>: Current position of the progressbar.</li>
+	<li><strong>percent</strong>: Current position of the progressbar expressed in percentage.</li>
+</ul>
+
+<div class="csharpcode">
+<!-- code formatted by http://manoli.net/csharpformat/ -->
+<pre>
+$('#progressbar').on("positionChanged", function (e) {
+    console.log(e.position);
+    console.log(e.percent);
+});</pre>
+</div>
+
+	<h3>License</h3>
+
+	<p>This code is made available under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank">Apache License v2.0, the same as Twitter Bootstrap.</a></p>
+
+	<h3>Contact</h3>
+
+	<p>Questions or suggestions? Mail me at <a href="mailto:geersch@gmail.com">geersch@gmail.com</a>.</p>
+
+	<p>Follow <a href="https://twitter.com/#!/cgeers" target="_blank">@cgeers</a> on Twitter.</p>
 
   </body>
 </html>
