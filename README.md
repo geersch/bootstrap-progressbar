@@ -91,6 +91,38 @@ Set the position, expressed in percentage, of the danger marker.
 $('#progressbar').('setDangerMarker', 90);
 ```
 
+**setStep**
+
+Set the step, by which the position of the progressbar is increased each time the stepIt() method is called.
+
+```
+$('#progressbar').('setStep', 10);
+```
+
+**setMaximum**
+
+Set the maximum allowed value of the progressbar.
+
+```
+$('#progressbar').('setMaximum', 85);
+```
+
+**setPosition**
+
+Set the current position of the progressbar. Must be less or equal to the maximum.
+
+```
+$('#progressbar').('setPosition', 85);
+```
+
+**reset**
+
+Resets the progressbar back to position 0.
+
+```
+$('#progressbar').('reset');
+```
+
 ## Events
 
 The progressbar supports one event, namely **positionChanged**. This event is triggered when its position changes.
