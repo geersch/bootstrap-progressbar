@@ -65,6 +65,10 @@ $('#progressbar').progressbar({
 </script>
 ```
 
+## Methods
+
+**$('#progressbar').('stepIt');**
+
 ## Events
 
 The progressbar supports one event, namely **positionChanged**. This event is triggered when its position changes.
