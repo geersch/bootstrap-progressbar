@@ -8,6 +8,9 @@ Multi-Color progressbar component for Twitter Bootstrap creates a progressbar wh
 * Orange (bar-warning)
 * Red (bar-danger)
 
+The progressbar consists out of three zones: safe, warning and danger. The safe zone is displayed in green, the warning 
+zone in orange and red is used for the danger zone.
+
 By default the following percentages are used for the zones:
 
 * Green (0 - 50%)
