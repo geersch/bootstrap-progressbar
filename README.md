@@ -67,7 +67,29 @@ $('#progressbar').progressbar({
 
 ## Methods
 
-**$('#progressbar').('stepIt');**
+**stepIt**
+
+Increases the position of the progressbar with the value its step property.
+
+```
+$('#progressbar').('stepIt');
+```
+
+**setWarningMarker**
+
+Set the position, expressed in percentage, of the warning marker.
+
+```
+$('#progressbar').('setWarningMarker', 50);
+```
+
+**setDangerMarker**
+
+Set the position, expressed in percentage, of the danger marker.
+
+```
+$('#progressbar').('setDangerMarker', 90);
+```
 
 ## Events
 
