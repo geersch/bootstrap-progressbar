@@ -17,4 +17,6 @@ By default the following percentages are used for the zones:
 * Warning (50 - 90%)
 * Danger (90 - 100%)
 
-The progressbar automatically changes the color depending on its position / percentage.
+The progressbar automatically changes the color depending on its position.
+
+# Usage
