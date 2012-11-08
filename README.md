@@ -140,3 +140,6 @@ $('#progressbar').on("positionChanged", function (e) {
 ```
 
 ## License
+
+This code is made available under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0), 
+the same as Twitter Bootstrap.
