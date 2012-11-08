@@ -2,8 +2,6 @@
 
 Multi-Color progressbar component for Twitter Bootstrap creates a progressbar which consists out of three colors.
 
-The default colors are:
-
 * Green (bar-success)
 * Orange (bar-warning)
 * Red (bar-danger)
