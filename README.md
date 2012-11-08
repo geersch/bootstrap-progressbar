@@ -37,3 +37,12 @@ Basic usage:
 $('#progressbar').progressbar();
 </script>
 ```
+
+You can use the following additional options to modify the behaviour of the progressbar:
+
+* **warningMarker**: Percentage at which the warning zone starts (default 50%).
+* **dangerMarker**: Percentage at which the danger zone starts (default 90%).
+* **maximum**: Maximum value which equals 100%.
+* **step**: The amount that each completed task in an operation changes the value of the progress bar.
+
+## License
