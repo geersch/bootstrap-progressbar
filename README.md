@@ -69,7 +69,7 @@ $('#progressbar').progressbar({
 
 **stepIt**
 
-Increases the position of the progressbar with the value its step property.
+Increases the position of the progressbar with the value of its step property.
 
 ```
 $('#progressbar').('stepIt');
