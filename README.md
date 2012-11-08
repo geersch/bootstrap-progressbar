@@ -69,6 +69,11 @@ $('#progressbar').progressbar({
 
 The progressbar supports one event, namely **positionChanged**. This event is triggered when its position changes.
 
+The event objects has two additional properties:
+
+* **position**: Current position of the progressbar.
+* **percent**: Current position of the progressbar expressed in percentage.
+
 ```
 $('#progressbar').on("positionChanged", function (e) {
     console.log(e.position);
