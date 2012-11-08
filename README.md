@@ -19,6 +19,10 @@ By default the following percentages are used for the zones:
 
 The progressbar automatically changes the color depending on its position.
 
+## Demo
+
+[Click here for a live demo].(http://geersch.github.com/bootstrap-progressbar/demo.html)
+
 ## Usage
 
 This component relies on [Twitter Bootstrap](http://twitter.github.com/bootstrap/) and [jQuery](http://jquery.com/).
