@@ -21,14 +21,16 @@ The progressbar automatically changes the color depending on its position.
 
 ## Usage
 
-This component relies on [Twitter Bootstrap](http://twitter.github.com/bootstrap/), and [jQuery](http://jquery.com/).
+This component relies on [Twitter Bootstrap](http://twitter.github.com/bootstrap/) and [jQuery](http://jquery.com/).
 
 Basic usage:
 
 ```
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="bootstrap.js"></script>
+<link rel="stylesheet" type="text/css" href="bootstrap.css" />
 
 <script type="text/javascript">
-
+$('#progressbar').progressbar();
 </script>
-
 ```
