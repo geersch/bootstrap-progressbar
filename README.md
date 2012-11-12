@@ -131,7 +131,7 @@ $('#progressbar').('reset');
 
 The progressbar supports one event, namely **positionChanged**. This event is triggered when its position changes.
 
-The event objects has two additional properties:
+The event object has two additional properties:
 
 * **position**: Current position of the progressbar.
 * **percent**: Current position of the progressbar expressed in percentage.
