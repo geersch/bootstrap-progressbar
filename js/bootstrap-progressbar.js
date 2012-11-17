@@ -42,7 +42,6 @@
 
 		setWarningMarker: function (marker) {
 			marker = parseInt(marker);
-
 			if (marker > this.dangerMarker) {
 				this.warningMarker = this.dangerMarker;
 				return;
@@ -76,24 +75,28 @@
 
 			this.position = position;
 			this.percent = Math.ceil((this.position / this.maximum) * 100);
-			this._triggerPositionChanged();
 
-			if (this.percent <= this.warningMarker) {
-				this.element.find('.bar-success').css('width', this.percent + "%");
-				this.element.find('.bar-warning').css('width', "0%");
-				this.element.find('.bar-danger').css('width', "0%");
-				return;
-			}
+		    try {
+			    if (this.percent <= this.warningMarker) {
+				    this.element.find('.bar-success').css('width', this.percent + "%");
+				    this.element.find('.bar-warning').css('width', "0%");
+				    this.element.find('.bar-danger').css('width', "0%");
+				    return;
+			    }
 
-			this.element.find('.bar-success').css('width', this.warningMarker + "%");
-			if (this.percent > this.warningMarker && this.percent <= this.dangerMarker) {
-				this.element.find('.bar-warning').css('width', (this.percent - this.warningMarker) + "%");
-				this.element.find('.bar-danger').css('width', "0%");
-				return;
-			}
+			    this.element.find('.bar-success').css('width', this.warningMarker + "%");
+			    if (this.percent > this.warningMarker && this.percent <= this.dangerMarker) {
+				    this.element.find('.bar-warning').css('width', (this.percent - this.warningMarker) + "%");
+				    this.element.find('.bar-danger').css('width', "0%");
+				    return;
+			    }
 
-			this.element.find('.bar-warning').css('width', (this.dangerMarker - this.warningMarker) + "%");
-			this.element.find('.bar-danger').css('width', (this.percent - this.dangerMarker) + "%");
+			    this.element.find('.bar-warning').css('width', (this.dangerMarker - this.warningMarker) + "%");
+			    this.element.find('.bar-danger').css('width', (this.percent - this.dangerMarker) + "%");
+		    
+		    } finally {
+		        this._triggerPositionChanged();
+		    }
 		},
 
 		reset: function () {
