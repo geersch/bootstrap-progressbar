@@ -76,7 +76,7 @@ $('#progressbar').progressbar({
 Increases the position of the progressbar with the value of its step property.
 
 ```
-$('#progressbar').('stepIt');
+$('#progressbar').progressbar('stepIt');
 ```
 
 **setWarningMarker**
@@ -84,7 +84,7 @@ $('#progressbar').('stepIt');
 Set the position, expressed in percentage, of the warning marker.
 
 ```
-$('#progressbar').('setWarningMarker', 50);
+$('#progressbar').progressbar('setWarningMarker', 50);
 ```
 
 **setDangerMarker**
@@ -92,7 +92,7 @@ $('#progressbar').('setWarningMarker', 50);
 Set the position, expressed in percentage, of the danger marker.
 
 ```
-$('#progressbar').('setDangerMarker', 90);
+$('#progressbar').progressbar('setDangerMarker', 90);
 ```
 
 **setStep**
@@ -100,7 +100,7 @@ $('#progressbar').('setDangerMarker', 90);
 Set the step, by which the position of the progressbar is increased each time the stepIt() method is called.
 
 ```
-$('#progressbar').('setStep', 10);
+$('#progressbar').progressbar('setStep', 10);
 ```
 
 **setMaximum**
@@ -108,7 +108,7 @@ $('#progressbar').('setStep', 10);
 Set the maximum allowed value of the progressbar.
 
 ```
-$('#progressbar').('setMaximum', 85);
+$('#progressbar').progressbar('setMaximum', 85);
 ```
 
 **setPosition**
@@ -116,7 +116,7 @@ $('#progressbar').('setMaximum', 85);
 Set the current position of the progressbar. Must be less or equal to the maximum.
 
 ```
-$('#progressbar').('setPosition', 85);
+$('#progressbar').progressbar('setPosition', 85);
 ```
 
 **reset**
@@ -124,7 +124,7 @@ $('#progressbar').('setPosition', 85);
 Resets the progressbar back to position 0.
 
 ```
-$('#progressbar').('reset');
+$('#progressbar').progressbar('reset');
 ```
 
 ## Events
