@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Progressbar Demo</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css" rel="stylesheet">
+
+    <script type='text/javascript' src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src="http://knockoutjs.com/downloads/knockout-2.3.0.js"></script>
+    <script type='text/javascript' src="javascripts/bootstrap-progressbar.js"></script>
+  </head>
+
+  <body>
+    <div class="container">
+
+      <div class="row">
+        <div class="row"
+          <h2>Progressbar Demo</h2>
+
+          <div>
+            <div id="progressbar">
+            </div>
+
+            <span data-bind="text: formattedPercent()" class="pull-right badge"></span>
+          </div>
+        </div>
+
+        <div class="row">
+          <label>Maximum</label>
+          <input type="text" data-bind="value: maximum, enable: !isRunning()" class="input-mini" />
+
+          <label>Step</label>
+          <input type="text" data-bind="value: step, enable: !isRunning()" class="input-mini" />
+
+          <label>Position</label>
+          <input type="text" data-bind="value: position, enable: !isRunning()" class="input-mini" />
+
+
+          <div class="pull-right">
+            <input type="button" class="btn btn-primary" value="Step" data-bind="click: stepIt, enable: !isRunning()" />
+            <input type="button" class="btn btn-primary" value="Reset" data-bind="click: reset, enable: !isRunning()" />
+            <input type="button" class="btn btn-primary" value="Start Timer" data-bind="click: start, enable: !isRunning()" />
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript">
+
+        $(function () {
+          $('#progressbar').progressbar({
+            warningMarker: 50,
+            dangerMarker: 75,
+            maximum: 100,
+            step: 1
+          });
+
+          $('#progressbar').on("positionChanged", function (e) {
+            viewModel.percent(e.percent);
+          });
+
+          ko.applyBindings(viewModel);
+        });
+
+        var viewModel = {
+          percent: ko.observable(0),
+          step: ko.observable(1),
+          maximum: ko.observable(100),
+          position: ko.observable(80),
+          interval: undefined,
+          isRunning: ko.observable(false),
+          stepIt: function () {
+            $('#progressbar').progressbar('stepIt');
+          },
+
+          reset: function () {
+            $('#progressbar').progressbar('reset');
+          },
+
+          start: function () {
+            if (this.isRunning())
+              return;
+           this.reset();
+           this.isRunning(true);
+
+           var self = this;
+           this.interval = setInterval(function () {
+             $('#progressbar').progressbar('stepIt');
+             if (self.percent() >= 100) {
+             clearInterval(self.interval);
+             self.interval = undefined;
+             self.isRunning(false);
+             }
+           }, 250);
+         }
+      };
+
+      viewModel.formattedPercent = ko.computed(function () {
+        return this.percent() + '%';
+        }, viewModel);
+
+      viewModel.maximum.subscribe(function (newValue) {
+        $('#progressbar').progressbar('setMaximum', newValue);
+        }, viewModel);
+
+      viewModel.position.subscribe(function (newValue) {
+        $('#progressbar').progressbar('setPosition', newValue);
+        }, viewModel);
+
+      viewModel.step.subscribe(function (newValue) {
+        $('#progressbar').progressbar('setStep', newValue);
+        }, viewModel);
+    </script>
+  </div>
+</body>
+</html>
