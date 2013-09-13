@@ -36,7 +36,7 @@
 		stepIt: function () {
 			if (this.position < this.maximum)
 				this.position += this.step;
-			
+
 			this.setPosition(this.position);
 		},
 
@@ -62,7 +62,7 @@
 			step = parseInt(step);
 			if (step <= 0)
 				step = 1;
-			
+
 			this.step = parseInt(step);
 		},
 
@@ -93,7 +93,7 @@
 
 			    this.element.find('.bar-warning').css('width', (this.dangerMarker - this.warningMarker) + "%");
 			    this.element.find('.bar-danger').css('width', (this.percent - this.dangerMarker) + "%");
-		    
+
 		    } finally {
 		        this._triggerPositionChanged();
 		    }
@@ -146,9 +146,9 @@
 	var DRPGlobal = {};
 
 	DRPGlobal.template = '<div class="progress">' +
-						 '<div class="bar bar-success" style="width: 0%;"></div>' +
-						 '<div class="bar bar-warning" style="width: 0%;"></div>' +
-						 '<div class="bar bar-danger" style="width: 0%;"></div>' +
+						 '<div class="bar bar-success progress-bar progress-bar-success" style="width: 0%;"></div>' +
+						 '<div class="bar bar-warning progress-bar progress-bar-warning" style="width: 0%;"></div>' +
+						 '<div class="bar bar-danger progress-bar progress-bar-danger" style="width: 0%;"></div>' +
 						 '</div>';
 
 } (window.jQuery);
