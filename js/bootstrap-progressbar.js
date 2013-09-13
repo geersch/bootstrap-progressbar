@@ -146,9 +146,9 @@
 	var DRPGlobal = {};
 
 	DRPGlobal.template = '<div class="progress">' +
-						 '<div class="bar bar-success" style="width: 0%;"></div>' +
-						 '<div class="bar bar-warning" style="width: 0%;"></div>' +
-						 '<div class="bar bar-danger" style="width: 0%;"></div>' +
-						 '</div>';
+		'<div class="bar bar-success progress-bar progress-bar-success" style="width: 0%;"></div>' +
+        '<div class="bar bar-warning progress-bar progress-bar-warning" style="width: 0%;"></div>' +
+        '<div class="bar bar-danger progress-bar progress-bar-danger" style="width: 0%;"></div>' +
+		'</div>';
 
 } (window.jQuery);
