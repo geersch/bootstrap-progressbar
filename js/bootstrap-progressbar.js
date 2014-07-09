@@ -1,4 +1,4 @@
-﻿!function ($) {
+!function ($) {
 
 	var ProgressBar = function (element, options) {
 		this.element = $(element);
@@ -6,16 +6,6 @@
 		this.percent = 0;
 
 		var hasOptions = typeof options == 'object';
-
-		this.dangerMarker = $.fn.progressbar.defaults.dangerMarker;
-		if (hasOptions && typeof options.dangerMarker == 'number') {
-			this.setDangerMarker(options.dangerMarker);
-		}
-
-		this.warningMarker = $.fn.progressbar.defaults.warningMarker;
-		if (hasOptions && typeof options.warningMarker == 'number') {
-			this.setWarningMarker(options.warningMarker);
-		}
 
 		this.maximum = $.fn.progressbar.defaults.maximum;
 		if (hasOptions && typeof options.maximum == 'number') {
@@ -40,20 +30,6 @@
 			this.setPosition(this.position);
 		},
 
-		setWarningMarker: function (marker) {
-			marker = parseInt(marker);
-			if (marker > this.dangerMarker) {
-				this.warningMarker = this.dangerMarker;
-				return;
-			}
-
-			this.warningMarker = marker;
-		},
-
-		setDangerMarker: function (marker) {
-			this.dangerMarker = parseInt(marker);
-		},
-
 		setMaximum: function (maximum) {
 			this.maximum = parseInt(maximum);
 		},
@@ -75,37 +51,16 @@
 
 			this.position = position;
 			this.percent = Math.ceil((this.position / this.maximum) * 100);
+			this.element.find('.bar').css('width', this.percent + "%");
+			this._triggerPositionChanged();
 
-		    try {
-			    if (this.percent <= this.warningMarker) {
-				    this.element.find('.bar-success').css('width', this.percent + "%");
-				    this.element.find('.bar-warning').css('width', "0%");
-				    this.element.find('.bar-danger').css('width', "0%");
-				    return;
-			    }
-
-			    this.element.find('.bar-success').css('width', this.warningMarker + "%");
-			    if (this.percent > this.warningMarker && this.percent <= this.dangerMarker) {
-				    this.element.find('.bar-warning').css('width', (this.percent - this.warningMarker) + "%");
-				    this.element.find('.bar-danger').css('width', "0%");
-				    return;
-			    }
-
-			    this.element.find('.bar-warning').css('width', (this.dangerMarker - this.warningMarker) + "%");
-			    this.element.find('.bar-danger').css('width', (this.percent - this.dangerMarker) + "%");
-
-		    } finally {
-		        this._triggerPositionChanged();
-		    }
 		},
 
 		reset: function () {
 			this.position = 0;
 			this.percent = 0;
 			this._triggerPositionChanged();
-			this.element.find('.bar-success').css('width', "0%");
-			this.element.find('.bar-warning').css('width', "0%");
-			this.element.find('.bar-danger').css('width', "0%");
+			this.element.find('.bar').css('width', "0%");
 		},
 
 		_triggerPositionChanged: function () {
@@ -135,8 +90,6 @@
 	};
 
 	$.fn.progressbar.defaults = {
-		warningMarker: 50,
-		dangerMarker: 90,
 		maximum: 100,
 		step: 1
 	};
@@ -147,8 +100,6 @@
 
 	DRPGlobal.template = '<div class="progress">' +
 						 '<div class="bar bar-success progress-bar progress-bar-success" style="width: 0%;"></div>' +
-						 '<div class="bar bar-warning progress-bar progress-bar-warning" style="width: 0%;"></div>' +
-						 '<div class="bar bar-danger progress-bar progress-bar-danger" style="width: 0%;"></div>' +
 						 '</div>';
 
 } (window.jQuery);
