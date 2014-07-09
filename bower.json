@@ -1,0 +1,10 @@
+{
+    "name": "bs-progressbar",
+    "version": "0.1.0",
+    "main": "./js/bootstrap-progressbar.js",
+    "dependencies":{
+    },
+    "ignore": [
+
+    ]
+}
