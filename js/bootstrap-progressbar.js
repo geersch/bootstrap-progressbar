@@ -4,6 +4,8 @@
 		this.element = $(element);
 		this.position = 0;
 		this.percent = 0;
+		
+		options = $.extend({},$.fn.progressbar.defaults,options);
 
 		var hasOptions = typeof options == 'object';
 
@@ -18,7 +20,9 @@
 		}
 
 		this.element.html($('<div>').addClass('progress').append(
-			$('<div>').addClass('bar bar-success progress-bar progress-bar-success')
+			$('<div>').addClass('bar progress-bar')
+			.addClass('bar-'+options.type)
+			.addClass('progress-bar-'+options.type)
 		));
 	};
 
