@@ -17,7 +17,9 @@
 			this.setStep(options.step);
 		}
 
-		this.element.html($(DRPGlobal.template));
+		this.element.html($('<div>').addClass('progress').append(
+			$('<div>').addClass('bar bar-success progress-bar progress-bar-success')
+		));
 	};
 
 	ProgressBar.prototype = {
@@ -91,15 +93,10 @@
 
 	$.fn.progressbar.defaults = {
 		maximum: 100,
-		step: 1
+		step: 1,
+		type:'success'
 	};
 
 	$.fn.progressbar.Constructor = ProgressBar;
-
-	var DRPGlobal = {};
-
-	DRPGlobal.template = '<div class="progress">' +
-						 '<div class="bar bar-success progress-bar progress-bar-success" style="width: 0%;"></div>' +
-						 '</div>';
 
 } (window.jQuery);
