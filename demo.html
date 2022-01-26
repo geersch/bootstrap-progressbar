@@ -18,8 +18,6 @@
 <div>
 	<div id="progressbar">
 	</div>
-
-	<span data-bind="text: formattedPercent()" class="pull-right badge"></span>
 </div>
 
 <label>Maximum</label>
@@ -89,10 +87,6 @@
 			}, 250);
 		}
 	};
-
-	viewModel.formattedPercent = ko.computed(function () {
-		return this.percent() + '%';
-	}, viewModel);
 
 	viewModel.maximum.subscribe(function (newValue) {
 		$('#progressbar').progressbar('setMaximum', newValue);
