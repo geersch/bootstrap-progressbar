@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="bootstrap-progressbar : " />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/stylesheet.css" />
 
     <title>bootstrap-progressbar</title>
   </head>
@@ -33,8 +33,6 @@
       <section id="main_content" class="inner">
         <h3>Multi-Color Progressbar for Twitter Bootstrap</h3>
 
-		<img src="https://dl.dropbox.com/u/40603470/bootstrap-progressbar/bar.png" alt="Progressbar example" title="Progressbar example" />
-
 		<p>Multi-Color progressbar component for Twitter Bootstrap creates a progressbar which consists out of three colors or zones.</p>
 
 		<ul>
@@ -60,12 +58,11 @@
 
 <h3>Usage</h3>
 
-<p>This component relies on <a href="http://twitter.github.com/bootstrap/" target="_blank">Twitter Bootstrap</a> and <a href="http://jquery.com/" target="_blank">jQuery</a>.</p>
+<p>This component relies on <a href="http://twitter.github.io/bootstrap/" target="_blank">Twitter Bootstrap</a> and <a href="http://jquery.com/" target="_blank">jQuery</a>.</p>
 
 <p>Basic usage:</p>
 
 <div class="csharpcode">
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre>
 <span class="kwrd">&lt;</span><span class="html">script</span> <span class="attr">type</span><span class="kwrd">="text/javascript"</span> <span class="attr">src</span><span class="kwrd">="jquery.js"</span><span class="kwrd">&gt;&lt;/</span><span class="html">script</span><span class="kwrd">&gt;</span>
 &lt;script type=<span class="str">"text/javascript"</span> src=<span class="str">"bootstrap.js"</span>&gt;&lt;/script&gt;
@@ -91,7 +88,6 @@ $(<span class="str">'#progressbar'</span>).progressbar();
 <p>For example:</p>
 
 <div class="csharpcode">
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre>
 <span class="kwrd">&lt;</span><span class="html">script</span> <span class="attr">type</span><span class="kwrd">="text/javascript"</span> <span class="attr">src</span><span class="kwrd">="jquery.js"</span><span class="kwrd">&gt;&lt;/</span><span class="html">script</span><span class="kwrd">&gt;</span>
 &lt;script type=<span class="str">"text/javascript"</span> src=<span class="str">"bootstrap.js"</span>&gt;&lt;/script&gt;
@@ -117,7 +113,6 @@ $(<span class="str">'#progressbar'</span>).progressbar({
 <p>Increases the position of the progressbar with the value of its step property.</p>
 
 <div class="csharpcode">
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre>
 $('#progressbar').progressbar('stepIt');</pre>
 </div>
@@ -127,7 +122,6 @@ $('#progressbar').progressbar('stepIt');</pre>
 <p>Set the position, expressed in percentage, of the warning marker.</p>
 
 <div class="csharpcode">
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre>
 $('#progressbar').progressbar('setWarningMarker', 50);</pre>
 </div>
@@ -137,7 +131,6 @@ $('#progressbar').progressbar('setWarningMarker', 50);</pre>
 <p>Set the position, expressed in percentage, of the danger marker.</p>
 
 <div class="csharpcode">
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre>
 $('#progressbar').progressbar('setDangerMarker', 90);</pre>
 </div>
@@ -157,7 +150,6 @@ $('#progressbar').progressbar('setStep', 10);</pre>
 <p>Set the maximum allowed value of the progressbar.</p>
 
 <div class="csharpcode">
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre>
 $('#progressbar').progressbar('setMaximum', 85);</pre>
 </div>
@@ -167,7 +159,6 @@ $('#progressbar').progressbar('setMaximum', 85);</pre>
 <p>Set the current position of the progressbar. Must be less or equal to the maximum.</p>
 
 <div class="csharpcode">
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre>
 $('#progressbar').progressbar('setPosition', 85);</pre>
 </div>
@@ -177,7 +168,6 @@ $('#progressbar').progressbar('setPosition', 85);</pre>
 <p>Resets the progressbar back to position 0.</p>
 
 <div class="csharpcode">
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre>
 $('#progressbar').progressbar('reset');</pre>
 </div>
@@ -194,7 +184,6 @@ $('#progressbar').progressbar('reset');</pre>
 </ul>
 
 <div class="csharpcode">
-<!-- code formatted by http://manoli.net/csharpformat/ -->
 <pre>
 $('#progressbar').on("positionChanged", function (e) {
     console.log(e.position);
@@ -209,8 +198,6 @@ $('#progressbar').on("positionChanged", function (e) {
 	<h3>Contact</h3>
 
 	<p>Questions or suggestions? Mail me at <a href="mailto:geersch@gmail.com">geersch@gmail.com</a>.</p>
-
-	<p>Follow <a href="https://twitter.com/#!/cgeers" target="_blank">@cgeers</a> on Twitter.</p>
 
   </body>
 </html>
