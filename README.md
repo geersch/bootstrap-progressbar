@@ -1,31 +1,29 @@
 # Multi-Color Progressbar for Twitter Bootstrap
 
-![Progressbar Example](https://dl.dropbox.com/u/40603470/bootstrap-progressbar/bar.png)
-
 Multi-Color progressbar component for Twitter Bootstrap creates a progressbar which consists out of three colors or zones.
 
-* Green (bar-success)
-* Orange (bar-warning)
-* Red (bar-danger)
+- Green (bar-success)
+- Orange (bar-warning)
+- Red (bar-danger)
 
-The progressbar consists out of three zones: safe, warning and danger. The safe zone is displayed in green, the warning 
+The progressbar consists out of three zones: safe, warning and danger. The safe zone is displayed in green, the warning
 zone in orange and red is used for the danger zone.
 
 By default the following percentages are used for the zones:
 
-* Green (0 - 50%)
-* Warning (50 - 90%)
-* Danger (90 - 100%)
+- Green (0 - 50%)
+- Warning (50 - 90%)
+- Danger (90 - 100%)
 
 The progressbar automatically changes the color depending on its position.
 
 ## Demo
 
-[Click here for a live demo](http://geersch.github.com/bootstrap-progressbar/demo.html).
+[Click here for a live demo](http://geersch.github.io/bootstrap-progressbar/demo.html).
 
 ## Usage
 
-This component relies on [Twitter Bootstrap](http://twitter.github.com/bootstrap/) and [jQuery](http://jquery.com/).
+This component relies on [Twitter Bootstrap](http://twitter.github.io/bootstrap/) and [jQuery](http://jquery.com/).
 
 Basic usage:
 
@@ -44,10 +42,10 @@ $('#progressbar').progressbar();
 
 You can use the following additional options to modify the behaviour of the progressbar:
 
-* **warningMarker**: Percentage at which the warning zone starts (default 50%).
-* **dangerMarker**: Percentage at which the danger zone starts (default 90%).
-* **maximum**: Maximum value which equals 100%.
-* **step**: The amount that each completed task in an operation changes the value of the progress bar.
+- **warningMarker**: Percentage at which the warning zone starts (default 50%).
+- **dangerMarker**: Percentage at which the danger zone starts (default 90%).
+- **maximum**: Maximum value which equals 100%.
+- **step**: The amount that each completed task in an operation changes the value of the progress bar.
 
 For example:
 
@@ -133,8 +131,8 @@ The progressbar supports one event, namely **positionChanged**. This event is tr
 
 The event object has two additional properties:
 
-* **position**: Current position of the progressbar.
-* **percent**: Current position of the progressbar expressed in percentage.
+- **position**: Current position of the progressbar.
+- **percent**: Current position of the progressbar expressed in percentage.
 
 ```
 $('#progressbar').on("positionChanged", function (e) {
@@ -145,5 +143,5 @@ $('#progressbar').on("positionChanged", function (e) {
 
 ## License
 
-This code is made available under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0), 
+This code is made available under the [Apache License v2.0](http://www.apache.org/licenses/LICENSE-2.0),
 the same as Twitter Bootstrap.
